@@ -28,7 +28,7 @@ export const App = () => {
           {goods.map((p) => (
             <tr key={p} data-cy="Good" className={product === p ? 'has-background-success-light' : ''}>
               <td>
-                {product === '' && (
+                {product === p?'':(
                   <button
                     onClick={() => setProduct(p)}
                     data-cy="AddButton"
