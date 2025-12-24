@@ -1,5 +1,6 @@
 import 'bulma/css/bulma.css';
 import './App.scss';
+import {useState } from 'react';
 
 export const goods = [
   'Dumplings',
@@ -19,7 +20,7 @@ export const App = () => {
   return (
     <main className="section container">
       <h1 className="title is-flex is-align-items-center">
-        {product === '' ? '' : `${product} is selected`}
+        {product === '' ? 'No goods selected' : `${product} is selected`}
         {product !== '' ? (<button onClick={() => setProduct('')} data-cy="ClearButton" type="button" className="delete ml-3" />) : ''}
       </h1>
       <table className="table">
